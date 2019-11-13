@@ -1,0 +1,10 @@
+api:
+  image: abprk/csc510:latest
+  ports:
+    - "82:80"
+    - "8027:22"
+  volumes:
+    - ../docroot/api:/var/www/html/
+    - ./logs/apache2:/var/log/apache2/
+  environment:
+    - AUTHORIZED_KEYS="**NONE**"

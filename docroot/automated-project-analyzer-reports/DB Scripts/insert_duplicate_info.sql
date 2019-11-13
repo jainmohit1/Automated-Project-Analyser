@@ -1,0 +1,1 @@
+INSERT INTO `csc_se`.`duplicate_info` (`number_of_duplicate_lines`, `percentage_of_duplicate_lines`) VALUES ('34', '10');

@@ -1,0 +1,21 @@
+{% from "_formhelpers.html" import render_field %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<div class="title">Automated Project Analyzer</div>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/validate.css') }}">
+<form method=post>
+  <div>
+    {{ render_field(form.github_username) }}
+    {{ render_field(form.email) }}
+    {{ render_field(form.activation_key) }}
+    {{ render_field(form.github_repo) }}
+  </div>
+  <p class="submit"><input type=submit value='Populate Database'></p>
+</form>
